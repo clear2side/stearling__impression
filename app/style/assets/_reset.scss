@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  color: $c-text;
+  font-size: 18px;
+}
+
+body {
+  font-family: 'nova';
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: none;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+input {
+  outline: none;
+}
+
+i {
+  font-style: normal
+}
+
+.icon {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.hide__svg {
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(grey, 0.3);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: rgba(grey, 0.4);
+  -webkit-box-shadow: inset 0 0 6px rgba(grey, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(grey, 0.4);
+}

@@ -1,0 +1,149 @@
+extends ./modules/_head
+block variables
+  - var title = 'Home page'
+block content
+  //- .page__wrapper {{ message }}
+  .container__sections
+    .main__content
+
+      .section.section__greating.active
+        .title.section__greating--title.
+          Оценка коммерческого предложения
+        .container
+          .text.section__greating--text.
+            Здравствуйте!
+            Благодарим Вас за обращение в Stearling Web Agency!
+            Мы постоянно работаем над улутшением  наших продуктов и поэтому нам очень важно получить обратную связь о Ваших впечатлениях. Просим Вас ответить на несколько простых вопросов. Будем благодарны Вам за искренние ответы!
+          .text.section__greating--text.
+            Виталий Беспалый и вся команда «Stearling Web Agency».
+        button.button.section__greating--button заполнить форму
+      
+      .section.section__name
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>1</i> из <i>12</i>
+          .question__content
+            p.text.question__content--text.
+              Как Вас зовут? <i>*</i>
+            input.input__text.input__text--impression(type="text" placeholder="Ваше имя")
+            .submit__form
+              button.button.section__name--button далее
+              span.alt__submit или <i>enter</i>
+
+      .section.section__role
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>2</i> из <i>12</i>
+          .question__content
+            p.text__question.question__content--text.
+              Ваша роль в компании <i>*</i>
+            table.section__role--table
+              tr
+                td
+                  input(type="radio" name="role" value="owner")
+                  span Собственник компании
+                td
+                  input(type="radio" name="role" value="HR")
+                  span HR-директор/менеджер
+              tr
+                td
+                  input(type="radio" name="role" value="director")
+                  span Исполнительный директор
+                td
+                  input(type="radio" name="role" value="worker")
+                  span Сотрудник компании
+              tr
+                td
+                  input(type="radio" name="role" value="manager")
+                  span Топ-менеджер
+                td
+                  input(type="radio" name="role" value="secretary")
+                  span Секретарь
+              tr
+                td
+                  input(type="radio" name="role" value="sale")
+                  span Руководитель отдела продаж
+                td
+                  input(type="radio" name="role" value="IT")
+                  span IT-специалист
+    
+      .section.section__impression
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>3</i> из <i>12</i>
+          .question__content
+            p.text__question.
+              Оцените Ваше впечатление от организации  <i>*</i>
+            ul.section__impression--list
+              -var impression = ["Восхищен", "Удовлетворен", "Не полностью удовлетворен", "Не удовлетворен", "Все плохо"]
+              each impressions in impression
+                li.section__impression--item
+                  input(type="radio" name="impression" value="impressions")
+                  span= impressions
+            input.input__text.input__text--impression(type="text" placeholder="Комментарий")
+            .submit__form
+              button.button.section__impression--button далее
+              span.alt__submit или <i>enter</i>
+
+      .section.section__blogs
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>4</i> из <i>12</i>
+          .question__content
+            p.text__question.section__blogs--text.
+              Напишите, пожалуйста, какие интернет-издания, блоги или печатные СМИ Вы читаете чаще всего? <i>*</i>
+            ul.section__blogs--list
+              -for(i=1;i<=10;i++)
+                li.section__blogs--item= i
+            .section__blogs--span
+              .section__blogs--span_left.
+                Не порекомендую ни в коем случае
+              .section__blogs--span_right.
+                Обязательно порекомендую
+            
+      .section.section__recomend
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>5</i> из <i>12</i>
+          .question__content
+            p.text__question.section__recomend--text.
+              Каковая вероятность того, что Вы порекомендуете Stearling Web Agency как экспертов в области разработки эффективных системных веб проектов своим знакомым, друзьям, коллегам? <i>*</i>
+            input.input
+            .submit__form
+              button.button далее
+              span.alt__submit или <i>enter</i>
+
+      .section
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>6</i> из <i>12</i>
+          .question__content
+            p.text__question.
+              Как Вас зовут? <i>*</i>
+            input.input
+            .submit__form
+              button.button далее
+              span.alt__submit или <i>enter</i>
+      .section
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>6</i> из <i>12</i>
+          .question__content
+            p.text__question.
+              Как Вас зовут? <i>*</i>
+            input.input
+            .submit__form
+              button.button далее
+              span.alt__submit или <i>enter</i>
+
+      .section
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>6</i> из <i>12</i>
+          .question__content
+            p.text__question.
+              Как Вас зовут? <i>*</i>
+            input.input
+            .submit__form
+              button.button далее
+              span.alt__submit или <i>enter</i>

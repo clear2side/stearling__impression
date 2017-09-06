@@ -1,0 +1,93 @@
+@media screen and (max-width: 992px) {
+  /*laptop*/
+  .container__sections {
+    width: 600px;
+  }
+  .section__greating--text {
+    width: 90%;
+  }
+  .section__blogs--list {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*tablets*/
+  .section__greating--text {
+    font-size: 15px;
+  }
+  .question__number,
+  .question__content {
+    width: 100%;
+  }
+  .question__number {
+    text-align: right;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  .number__question--info {
+    color: lightgrey;
+  }
+  .section__recomend--text {
+    font-size: 15px;
+  }
+  .section__blogs--list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .section__blogs--item {
+    padding: 9px;
+  }
+  .question__content--wrapper {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .section__greating--title {
+    margin-bottom: 10px;
+  }
+  .container__sections {
+    width: 350px;
+  }
+  .section__greating--text {
+    width: 100%;
+  }
+  .section__role--table {
+    td {
+      padding: 5px 10px 5px 0;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*phones*/
+  .container__sections {
+    width: 250px;
+  }
+  .section__greating--text {
+    font-size: 13px;
+  }
+  .section__blogs--text {
+    font-size: 16px;
+  }
+  .section__blogs--item {
+    padding: 0;
+  }
+  .section__blogs--span {
+    font-size: 14px !important;
+  }
+  .section__role--table td {
+    padding: 0;
+  }
+  .section__impression--item span {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  .question__content--text {
+    margin-bottom: 20px;
+  }
+}

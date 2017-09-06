@@ -1,0 +1,1 @@
+console.log('this_is_module-slider.js');

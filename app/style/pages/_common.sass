@@ -1,0 +1,139 @@
+body, html
+  overflow: hidden
+
+.container__sections
+  position: absolute
+  top: -100px
+  bottom: 0
+  left: 0
+  right: 0
+  height: $contHeight
+  width: 790px
+  margin: auto
+
+.container
+  width: 100%
+  margin: auto
+
+.section
+  display: flex
+  align-items: center
+  height: $contHeight
+  width: 100%
+  opacity: .2
+  z-index: 1
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    height: $contHeight
+    width: 100%
+    z-index: 2
+  &.active
+    opacity: 1
+    &:after
+      display: none
+
+.main__content
+  position: relative
+  top: 0
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  transition-duration: 1s;
+
+.title
+  font-size: 27px
+  
+.text
+  font-weight: 300
+  color: $c-grey
+
+.text__question
+  color: $c-text
+  font-weight: normal
+  i
+    color: red
+
+.content__wrapper
+  height: calc(100% - 100px)
+  position: relative
+
+.button
+  text-transform: uppercase
+  font-size: 14px
+  background: $c-blue
+  width: 200px
+  padding: 15px 0px
+  color: white
+  &:hover
+    &.button:after
+      transform: translateX(10px) translateY(10px) 
+
+.button:after
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 2px solid $c-blue;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: ease .2s;
+  transition: ease .2s;
+
+.input__text
+  border: none
+  padding: 10px 0
+  color: $c-text
+  border-bottom: 1px solid lightgrey
+  box-shadow: 0px 1px 0px lightgrey
+  &:focus
+    transition: 1s ease
+    border-color: $c-blue
+    box-shadow: 0px 1px 0px $c-blue
+  &::-webkit-input-placeholder 
+    color: lightgrey
+  &::-moz-placeholder          
+    color: lightgrey
+  &:-moz-placeholder           
+    color: lightgrey
+  &:-ms-input-placeholder      
+    color: lightgrey
+    
+
+.question__content--wrapper
+  display: inherit
+  flex-direction: row
+  width: 100%
+
+.question__number,.question__content
+  display: inherit
+
+.question__number
+  width: 200px
+
+.question__content
+  flex-direction: column
+  width: calc(100% - 200px)
+  justify-content: space-between
+
+.number__question--info 
+  color: $c-text
+  i
+    color: $c-blue
+
+.submit__form
+  display: flex
+  align-items: center
+
+.alt__submit
+  color: lightgrey
+  font-size: 14px
+  margin-left: 12px
+  i
+    text-transform: uppercase
+ 
+    
