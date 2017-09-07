@@ -7,7 +7,14 @@ $(document).ready(function () {
     position = 0;
 
   $('pages:first-child').addClass('active');
+  $('.button__type--radio').on('click', function () {
+    $(this).addClass('active');
+  });
 
+  $('.section__blogs--item').on('click', function () {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+  /* scroll */
   $('body').on('mousewheel', function (event) {
     var activePage = pages.filter('.active');
     if (!inscroll) {
@@ -29,12 +36,11 @@ $(document).ready(function () {
     container.css('top', position);
     setTimeout(function () {
       inscroll = false;
-    });
+    }, 600);
   });
-
 
   /* section__greating */
-  $('.section__greating--button').on('click', function () {
+  $('.section__greating--button,.button--without').on('click', function () {
     screen++;
     position = (-screen * 300) + 'px';
 
@@ -45,53 +51,55 @@ $(document).ready(function () {
     });
   });
 
-
-  /* section__name */
-  $('.section__name--button').on('click', function () {
-    screen++;
-    position = (-screen * 300) + 'px';
-
-    pages.eq(screen).addClass('active').siblings().removeClass('active')
-    container.css('top', position);
-    setTimeout(function () {
-      inscroll = false;
-    });
-  });
-
-  /* section__role */
-  $('.section__role--table input').on('click', function () {
-    screen++;
-    position = (-screen * 300) + 'px';
-
-    pages.eq(screen).addClass('active').siblings().removeClass('active')
-    container.css('top', position);
-    setTimeout(function () {
-      inscroll = false;
-    });
-  });
-
-  /* section__name */
-  $('.section__impression--button').on('click', function () {
-    screen++;
-    position = (-screen * 300) + 'px';
-
-    pages.eq(screen).addClass('active').siblings().removeClass('active')
-    container.css('top', position);
-    setTimeout(function () {
-      inscroll = false;
-    });
-  });
-
-  function validateBlank(selector, string) {
-    if (string == "") {
-      selector.html(string);
-      selector.css('color', 'red');
+  /* validation */
+  function validateBlank(reqInput, string) {
+    if ((string == "") || (string == "checked")) {
+      reqInput.show();
+      reqInput.html('Пожалуйста заполните поля *');
     } else {
-      selector.html("");
+      reqInput.html("");
+
+      screen++;
+      position = (-screen * 300) + 'px';
+
+      pages.eq(screen).addClass('active').siblings().removeClass('active')
+      container.css('top', position);
+      setTimeout(function () {
+        inscroll = false;
+      });
     }
   };
 
-});
+  /* .section__type--input validation */
+  $('.section__type--input .button').on('click', function () {
+    var reqInput = $(this).parent().siblings('.input__requirements');
+    var string = $(this).parent().siblings('.question__form').find('.input__text--impression.valid').val();
 
-//   button clicl validateBlank(sel, message)
-//   if valid == false не испольняется скролл
+    validateBlank(reqInput, string);
+  });
+
+  /* .section__type--radio validation */
+  $('.section__type--radio .button__type--radio').on('click', function () {
+    var reqInput = $(this).parent().siblings('.input__requirements');
+    var string = $(this).parent().siblings('.question__form').find('.input__text--impression').val();
+
+    validateBlank(reqInput, string);
+  });
+
+  /* .section__type--radio&&comment validation */
+  $('.section__type--radio_and_comment .button').on('click', function () {
+    var reqInput = $(this).parent().siblings('.input__requirements');
+    var string = $(this).parent().parent().parent().find('.question__content').find('.button__type--radio').hasClass('active');
+
+    validateBlank(reqInput, string);
+  });
+
+  /* .section__type--radio&&comment validation */
+  $('.section__type--grade .button').on('click', function () {
+    var reqInput = $(this).parent().siblings('.input__requirements');
+    var string = $(this).parent().parent().parent().find('.question__content').find('.section__blogs--item').hasClass('active');
+
+    validateBlank(reqInput, string);
+  });
+
+});

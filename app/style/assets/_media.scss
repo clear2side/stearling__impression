@@ -9,6 +9,15 @@
   .section__blogs--list {
     padding: 20px 0;
   }
+  .text {
+    font-size: 16px;
+  }
+  .submit__form {
+    margin-top: 10px;
+  }
+  .heavy__text-block {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -61,6 +70,29 @@
       font-size: 14px;
     }
   }
+  .section__impression--item {
+    padding-bottom: 0;
+  }
+  .input__text {
+    padding: 5px 0;
+    font-size: 14px;
+  }
+  .submit__form {
+    margin-top: 10px;
+  }
+  .question__number {
+    margin-bottom: 5px;
+  }
+  .section__impression--list {
+    margin-top: 0px;
+  }
+  .button {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+  .section__greating--text {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -89,5 +121,8 @@
   }
   .question__content--text {
     margin-bottom: 20px;
+  }
+  .text {
+    font-size: 14px;
   }
 }

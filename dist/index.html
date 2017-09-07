@@ -29,28 +29,39 @@
           <div class="section section__greating active">
             <div class="title section__greating--title">Оценка коммерческого предложения</div>
             <div class="container">
-              <div class="text section__greating--text">
+              <div class="text section__greating--text heavy__text-block">
                 Здравствуйте!
                 Благодарим Вас за обращение в Stearling Web Agency!
                 Мы постоянно работаем над улутшением  наших продуктов и поэтому нам очень важно получить обратную связь о Ваших впечатлениях. Просим Вас ответить на несколько простых вопросов. Будем благодарны Вам за искренние ответы!
               </div>
-              <div class="text section__greating--text">Виталий Беспалый и вся команда «Stearling Web Agency».</div>
+              <div class="text section__greating--text heavy__text-block">Виталий Беспалый и вся команда «Stearling Web Agency».</div>
             </div>
             <button class="button section__greating--button">заполнить форму</button>
           </div>
-          <div class="section section__name">
+          <div class="section section__name section__type--input">
             <div class="question__content--wrapper">
               <div class="question__number"><span class="number__question--info">Ответов <i>1</i> из <i>12</i></span></div>
               <div class="question__content">
-                <p class="text question__content--text">Как Вас зовут? <i>*</i></p>
-                <input class="input__text input__text--impression" type="text" placeholder="Ваше имя">
+                <div class="question__form">
+                  <p class="text question__content--text">Как Вас зовут? <i>*</i></p>
+                  <input class="input__text input__text--impression valid" type="text" placeholder="Имя *">
+                </div>
+                <div class="question__form">
+                  <p class="text question__content--text">Ваша Фамилия? <i>*</i></p>
+                  <input class="input__text input__text--impression valid" type="text" placeholder="Фамилия *">
+                </div>
+                <div class="question__form">
+                  <p class="text question__content--text">Компания</p>
+                  <input class="input__text input__text--impression" type="text" placeholder="Компания">
+                </div>
+                <div class="input__requirements"></div>
                 <div class="submit__form">
                   <button class="button section__name--button">далее</button><span class="alt__submit">или <i>enter</i></span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="section section__role">
+          <div class="section section__role section__type--radio">
             <div class="question__content--wrapper">
               <div class="question__number"><span class="number__question--info">Ответов <i>2</i> из <i>12</i></span></div>
               <div class="question__content">
@@ -58,62 +69,112 @@
                 <table class="section__role--table">
                   <tr>
                     <td>
-                      <input type="radio" name="role" value="owner"><span>Собственник компании</span>
+                      <input class="button__type--radio" type="radio" name="role" value="owner"><span>Собственник компании</span>
                     </td>
                     <td>
-                      <input type="radio" name="role" value="HR"><span>HR-директор/менеджер</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input type="radio" name="role" value="director"><span>Исполнительный директор</span>
-                    </td>
-                    <td>
-                      <input type="radio" name="role" value="worker"><span>Сотрудник компании</span>
+                      <input class="button__type--radio" type="radio" name="role" value="HR"><span>HR-директор/менеджер</span>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <input type="radio" name="role" value="manager"><span>Топ-менеджер</span>
+                      <input class="button__type--radio" type="radio" name="role" value="director"><span>Исполнительный директор</span>
                     </td>
                     <td>
-                      <input type="radio" name="role" value="secretary"><span>Секретарь</span>
+                      <input class="button__type--radio" type="radio" name="role" value="worker"><span>Сотрудник компании</span>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <input type="radio" name="role" value="sale"><span>Руководитель отдела продаж</span>
+                      <input class="button__type--radio" type="radio" name="role" value="manager"><span>Топ-менеджер</span>
                     </td>
                     <td>
-                      <input type="radio" name="role" value="IT"><span>IT-специалист</span>
+                      <input class="button__type--radio" type="radio" name="role" value="secretary"><span>Секретарь</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="button__type--radio" type="radio" name="role" value="sale"><span>Руководитель отдела продаж</span>
+                    </td>
+                    <td>
+                      <input class="button__type--radio" type="radio" name="role" value="IT"><span>IT-специалист</span>
                     </td>
                   </tr>
                 </table>
               </div>
             </div>
           </div>
-          <div class="section section__impression">
+          <div class="section section__content--mail section__type--input">
             <div class="question__content--wrapper">
               <div class="question__number"><span class="number__question--info">Ответов <i>3</i> из <i>12</i></span></div>
               <div class="question__content">
-                <p class="text__question">Оцените Ваше впечатление от организации  <i>*</i></p>
+                <div class="question__form">
+                  <p class="text question__content--text">Как Вас зовут? <i>*</i></p>
+                  <input class="input__text input__text--impression valid" type="text" placeholder="Ваш e-mail *">
+                </div>
+                <div class="question__form">
+                  <p class="text question__content--text">Ваша Фамилия? <i>*</i></p>
+                  <input class="input__text input__text--impression valid" type="text" placeholder="Ваш телефон *">
+                </div>
+                <div class="input__requirements"></div>
+                <div class="submit__form">
+                  <button class="button">далее</button><span class="alt__submit">или <i>enter</i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section__impression section__type--radio_and_comment">
+            <div class="question__content--wrapper">
+              <div class="question__number"><span class="number__question--info">Ответов <i>4</i> из <i>12</i></span></div>
+              <div class="question__content">
+                <p class="text text__question">Оцените Ваше впечатление от стилистики коммерческого предложения <i>*</i></p>
                 <ul class="section__impression--list">
                   <li class="section__impression--item">
-                    <input type="radio" name="impression" value="impressions"><span>Восхищен</span>
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Восхищен</span>
                   </li>
                   <li class="section__impression--item">
-                    <input type="radio" name="impression" value="impressions"><span>Удовлетворен</span>
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Удовлетворен</span>
                   </li>
                   <li class="section__impression--item">
-                    <input type="radio" name="impression" value="impressions"><span>Не полностью удовлетворен</span>
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не полностью удовлетворен</span>
                   </li>
                   <li class="section__impression--item">
-                    <input type="radio" name="impression" value="impressions"><span>Не удовлетворен</span>
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не удовлетворен</span>
                   </li>
                   <li class="section__impression--item">
-                    <input type="radio" name="impression" value="impressions"><span>Все плохо</span>
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Все плохо</span>
                   </li>
                 </ul>
+                <div class="input__requirements"></div>
+                <input class="input__text input__text--impression" type="text" placeholder="Комментарий">
+                <div class="submit__form submit__form--impression">
+                  <button class="button section__impression--button">далее</button><span class="alt__submit">или <i>enter</i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section__impression section__type--radio_and_comment">
+            <div class="question__content--wrapper">
+              <div class="question__number"><span class="number__question--info">Ответов <i>5</i> из <i>12</i></span></div>
+              <div class="question__content">
+                <p class="text text__question">Оцените Ваше впечатление от информативной подачи блоков по работам над вашим проектом <i>*</i></p>
+                <ul class="section__impression--list">
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Восхищен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не полностью удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Все плохо</span>
+                  </li>
+                </ul>
+                <div class="input__requirements"></div>
                 <input class="input__text input__text--impression" type="text" placeholder="Комментарий">
                 <div class="submit__form">
                   <button class="button section__impression--button">далее</button><span class="alt__submit">или <i>enter</i></span>
@@ -121,11 +182,127 @@
               </div>
             </div>
           </div>
-          <div class="section section__blogs">
+          <div class="section section__plans section__type--radio">
             <div class="question__content--wrapper">
-              <div class="question__number"><span class="number__question--info">Ответов <i>4</i> из <i>12</i></span></div>
+              <div class="question__number"><span class="number__question--info">Ответов <i>6</i> из <i>12</i></span></div>
               <div class="question__content">
-                <p class="text__question section__blogs--text">Напишите, пожалуйста, какие интернет-издания, блоги или печатные СМИ Вы читаете чаще всего? <i>*</i></p>
+                <p class="text text__question">Интересна ли Вам разработка эффективного системного веб проекта? <i>*</i></p>
+                <ul class="section__impression--list">
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Да, уже разрабатываю</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Да, планирую разрабатывать</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Расскажите мне подробнее</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не вижу отличий системного веб проекта от других продуктов на рынке</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Нет, не интересно</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section section__plans section__type--radio">
+            <div class="question__content--wrapper">
+              <div class="question__number"><span class="number__question--info">Ответов <i>7</i> из <i>12</i></span></div>
+              <div class="question__content">
+                <p class="text text__question">По каким критериям происходит отбор компании разработчика? <i>*</i></p>
+                <ul class="section__impression--list">
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Критерий «Стоимость»</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Критерий «Экспертиза»</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Критерий «Время выполнения»</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Критерий «Опыт»</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Критерий «Совет знакомых»</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Критерий «Пиар компаний разработчика» </span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>На данный момент отбор не актуальный</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section section__impression section__type--radio_and_comment">
+            <div class="question__content--wrapper">
+              <div class="question__number"><span class="number__question--info">Ответов <i>8</i> из <i>12</i></span></div>
+              <div class="question__content">
+                <p class="text text__question heavy__text-block">Оцените Ваше впечатление от организации подготовки коммерческого предложения (скорость отклика/ответа, конструктивные/понятные вопросы)? <i>*</i></p>
+                <ul class="section__impression--list">
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Восхищен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не полностью удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Все плохо</span>
+                  </li>
+                </ul>
+                <div class="input__requirements"></div>
+                <input class="input__text input__text--impression" type="text" placeholder="Комментарий">
+                <div class="submit__form submit__form--impression">
+                  <button class="button section__impression--button">далее</button><span class="alt__submit">или <i>enter</i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section__impression section__type--radio_and_comment">
+            <div class="question__content--wrapper">
+              <div class="question__number"><span class="number__question--info">Ответов <i>9</i> из <i>12</i></span></div>
+              <div class="question__content">
+                <p class="text text__question heavy__text-block">Оцените Ваше впечатление от работы наших сотрудников (приветливы ли были с вами, все ли ваши пожелания были учтены, конструктивные/понятные ли вопросы/ответы предоставлялись)? <i>*</i></p>
+                <ul class="section__impression--list">
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Восхищен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не полностью удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Не удовлетворен</span>
+                  </li>
+                  <li class="section__impression--item">
+                    <input class="button__type--radio" type="radio" name="impression" value="impressions"><span>Все плохо</span>
+                  </li>
+                </ul>
+                <div class="input__requirements"></div>
+                <input class="input__text input__text--impression" type="text" placeholder="Комментарий">
+                <div class="submit__form submit__form--impression">
+                  <button class="button section__impression--button">далее</button><span class="alt__submit">или <i>enter</i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section__blogs section__type--grade">
+            <div class="question__content--wrapper">
+              <div class="question__number"><span class="number__question--info">Ответов <i>10</i> из <i>12</i></span></div>
+              <div class="question__content">
+                <p class="text text__question section__blogs--text">Каковая вероятность того, что Вы порекомендуете Stearling Web Agency как экспертов в области разработки эффективных системных веб проектов своим знакомым, друзьям, коллегам? <i>*</i></p>
                 <ul class="section__blogs--list">
                   <li class="section__blogs--item">1</li>
                   <li class="section__blogs--item">2</li>
@@ -138,62 +315,31 @@
                   <li class="section__blogs--item">9</li>
                   <li class="section__blogs--item">10</li>
                 </ul>
-                <div class="section__blogs--span">
-                  <div class="section__blogs--span_left">Не порекомендую ни в коем случае</div>
-                  <div class="section__blogs--span_right">
-                    Обязательно порекомендую
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="section section__recomend">
-            <div class="question__content--wrapper">
-              <div class="question__number"><span class="number__question--info">Ответов <i>5</i> из <i>12</i></span></div>
-              <div class="question__content">
-                <p class="text__question section__recomend--text">Каковая вероятность того, что Вы порекомендуете Stearling Web Agency как экспертов в области разработки эффективных системных веб проектов своим знакомым, друзьям, коллегам? <i>*</i></p>
-                <input class="input">
+                <input class="input__text input__text--impression" type="text" placeholder="Назовите настоящую причину вашей оценки">
+                <div class="input__requirements"></div>
                 <div class="submit__form">
                   <button class="button">далее</button><span class="alt__submit">или <i>enter</i></span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="section">
+          <div class="section section__recomend section__without_validation">
             <div class="question__content--wrapper">
-              <div class="question__number"><span class="number__question--info">Ответов <i>6</i> из <i>12</i></span></div>
+              <div class="question__number"><span class="number__question--info">Ответов <i>11</i> из <i>12</i></span></div>
               <div class="question__content">
-                <p class="text__question">Как Вас зовут? <i>*</i></p>
-                <input class="input">
+                <p class="text text__question section__recomend--text heavy__text-block">Напишите, пожалуйста, какие интернет-издания, блоги или печатные СМИ Вы читаете чаще всего</p>
+                <input class="input__text input__text--impression" type="text" placeholder="Комментарий">
                 <div class="submit__form">
-                  <button class="button">далее</button><span class="alt__submit">или <i>enter</i></span>
+                  <button class="button button--without">далее</button><span class="alt__submit">или <i>enter</i></span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="section">
-            <div class="question__content--wrapper">
-              <div class="question__number"><span class="number__question--info">Ответов <i>6</i> из <i>12</i></span></div>
-              <div class="question__content">
-                <p class="text__question">Как Вас зовут? <i>*</i></p>
-                <input class="input">
-                <div class="submit__form">
-                  <button class="button">далее</button><span class="alt__submit">или <i>enter</i></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="section">
-            <div class="question__content--wrapper">
-              <div class="question__number"><span class="number__question--info">Ответов <i>6</i> из <i>12</i></span></div>
-              <div class="question__content">
-                <p class="text__question">Как Вас зовут? <i>*</i></p>
-                <input class="input">
-                <div class="submit__form">
-                  <button class="button">далее</button><span class="alt__submit">или <i>enter</i></span>
-                </div>
-              </div>
+          <div class="section section__greating">
+            <div class="title section__greating--title">Благодарим за искренние ответы</div>
+            <div class="container">
+              <div class="text section__greating--text heavy__text-block">Мы отправили Ваш бонус (Чеклист создания эффективноо системного веб проэкта) на Ваш e-mail <i>alex.bikov@mail.ru</i></div>
+              <div class="text section__greating--text heavy__text-block">Виталий Беспалый и вся команда «Stearling Web Agency».</div>
             </div>
           </div>
         </div>

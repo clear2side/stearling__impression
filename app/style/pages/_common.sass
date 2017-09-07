@@ -37,10 +37,7 @@ body, html
 .main__content
   position: relative
   top: 0
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  transition-duration: 1s;
+  transition-duration: .6s;
 
 .title
   font-size: 27px
@@ -85,8 +82,10 @@ body, html
   transition: ease .2s;
 
 .input__text
+  width: 100%
   border: none
-  padding: 10px 0
+  padding: 5px
+  margin-top: 10px
   color: $c-text
   border-bottom: 1px solid lightgrey
   box-shadow: 0px 1px 0px lightgrey
@@ -95,14 +94,13 @@ body, html
     border-color: $c-blue
     box-shadow: 0px 1px 0px $c-blue
   &::-webkit-input-placeholder 
-    color: lightgrey
+    color: $c-grey
   &::-moz-placeholder          
-    color: lightgrey
+    color: $c-grey
   &:-moz-placeholder           
-    color: lightgrey
+    color: $c-grey
   &:-ms-input-placeholder      
-    color: lightgrey
-    
+    color: $c-grey
 
 .question__content--wrapper
   display: inherit
@@ -126,8 +124,8 @@ body, html
     color: $c-blue
 
 .submit__form
-  display: flex
   align-items: center
+  margin-top: 20px
 
 .alt__submit
   color: lightgrey
@@ -136,4 +134,10 @@ body, html
   i
     text-transform: uppercase
  
-    
+.input__requirements
+  color: red
+  font-size: 14px
+
+.heavy__text-block
+  font-size: 16px
+

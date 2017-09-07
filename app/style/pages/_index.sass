@@ -13,6 +13,11 @@
   .question__content--wrapper
     height: 65%
 
+.button
+  display: inline-block
+
+.section__greating--button
+  margin-top: 0
 
 .section__role--table
   margin-top: 20px
@@ -33,14 +38,10 @@
 .section__impression--item
   padding-bottom: 5px
 
-.input__text--impression
-  margin-bottom: 20px
-
 .section__blogs--list
   padding: 20px 40px
   display: flex
   justify-content: space-between
-  border-bottom: 1px solid lightgrey
 
 .section__blogs--item
   color: $c-grey
@@ -50,18 +51,18 @@
     color: $c-blue
     cursor: pointer
 
-.section__blogs--span
-  display: flex
-  justify-content: space-between
+.question__form
+  margin-bottom: 10px
+  p
+   display: none
 
-.section__blogs--span_left,
-.section__blogs--span_right
+.section__impression--list
   margin-top: 10px
-  width: 50px
-  width: 155px
-  color: $c-grey
-  
-.section__blogs--span_left
+  margin-left: 10px
 
-.section__blogs--span_right
-  text-align: right
+.section__blogs--item.active
+  color: $c-blue
+
+.section__type--radio_and_comment
+  .input__text--impression
+    margin-bottom: 5px

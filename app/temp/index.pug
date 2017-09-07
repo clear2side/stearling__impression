@@ -10,27 +10,37 @@ block content
         .title.section__greating--title.
           Оценка коммерческого предложения
         .container
-          .text.section__greating--text.
+          .text.section__greating--text.heavy__text-block.
             Здравствуйте!
             Благодарим Вас за обращение в Stearling Web Agency!
             Мы постоянно работаем над улутшением  наших продуктов и поэтому нам очень важно получить обратную связь о Ваших впечатлениях. Просим Вас ответить на несколько простых вопросов. Будем благодарны Вам за искренние ответы!
-          .text.section__greating--text.
+          .text.section__greating--text.heavy__text-block.
             Виталий Беспалый и вся команда «Stearling Web Agency».
         button.button.section__greating--button заполнить форму
       
-      .section.section__name
+      .section.section__name.section__type--input
         .question__content--wrapper
           .question__number
             span.number__question--info Ответов <i>1</i> из <i>12</i>
           .question__content
-            p.text.question__content--text.
-              Как Вас зовут? <i>*</i>
-            input.input__text.input__text--impression(type="text" placeholder="Ваше имя")
+            .question__form
+              p.text.question__content--text.
+                Как Вас зовут? <i>*</i>
+              input.input__text.input__text--impression.valid(type="text" placeholder="Имя *")
+            .question__form
+              p.text.question__content--text.
+                Ваша Фамилия? <i>*</i>
+              input.input__text.input__text--impression.valid(type="text" placeholder="Фамилия *")
+            .question__form
+              p.text.question__content--text.
+                Компания
+              input.input__text.input__text--impression(type="text" placeholder="Компания")
+            .input__requirements
             .submit__form
               button.button.section__name--button далее
               span.alt__submit или <i>enter</i>
 
-      .section.section__role
+      .section.section__role.section__type--radio
         .question__content--wrapper
           .question__number
             span.number__question--info Ответов <i>2</i> из <i>12</i>
@@ -40,110 +50,189 @@ block content
             table.section__role--table
               tr
                 td
-                  input(type="radio" name="role" value="owner")
+                  input.button__type--radio(type="radio" name="role" value="owner")
                   span Собственник компании
+
                 td
-                  input(type="radio" name="role" value="HR")
+                  input.button__type--radio(type="radio" name="role" value="HR")
                   span HR-директор/менеджер
               tr
                 td
-                  input(type="radio" name="role" value="director")
+                  input.button__type--radio(type="radio" name="role" value="director")
                   span Исполнительный директор
                 td
-                  input(type="radio" name="role" value="worker")
+                  input.button__type--radio(type="radio" name="role" value="worker")
                   span Сотрудник компании
               tr
                 td
-                  input(type="radio" name="role" value="manager")
+                  input.button__type--radio(type="radio" name="role" value="manager")
                   span Топ-менеджер
                 td
-                  input(type="radio" name="role" value="secretary")
+                  input.button__type--radio(type="radio" name="role" value="secretary")
                   span Секретарь
               tr
                 td
-                  input(type="radio" name="role" value="sale")
+                  input.button__type--radio(type="radio" name="role" value="sale")
                   span Руководитель отдела продаж
                 td
-                  input(type="radio" name="role" value="IT")
+                  input.button__type--radio(type="radio" name="role" value="IT")
                   span IT-специалист
-    
-      .section.section__impression
+
+      .section.section__content--mail.section__type--input
         .question__content--wrapper
           .question__number
             span.number__question--info Ответов <i>3</i> из <i>12</i>
           .question__content
-            p.text__question.
-              Оцените Ваше впечатление от организации  <i>*</i>
+            .question__form
+              p.text.question__content--text.
+                Как Вас зовут? <i>*</i>
+              input.input__text.input__text--impression.valid(type="text" placeholder="Ваш e-mail *")
+            .question__form
+              p.text.question__content--text.
+                Ваша Фамилия? <i>*</i>
+              input.input__text.input__text--impression.valid(type="text" placeholder="Ваш телефон *")
+            .input__requirements
+            .submit__form
+              button.button далее
+              span.alt__submit или <i>enter</i>
+              
+      .section.section__impression.section__type--radio_and_comment
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>4</i> из <i>12</i>
+          .question__content
+            p.text.text__question.
+              Оцените Ваше впечатление от стилистики коммерческого предложения <i>*</i>
             ul.section__impression--list
               -var impression = ["Восхищен", "Удовлетворен", "Не полностью удовлетворен", "Не удовлетворен", "Все плохо"]
               each impressions in impression
                 li.section__impression--item
-                  input(type="radio" name="impression" value="impressions")
+                  input.button__type--radio(type="radio" name="impression" value="impressions")
                   span= impressions
+            .input__requirements
+            input.input__text.input__text--impression(type="text" placeholder="Комментарий")
+            .submit__form.submit__form--impression
+              button.button.section__impression--button далее
+              span.alt__submit или <i>enter</i>
+
+      .section.section__impression.section__type--radio_and_comment
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>5</i> из <i>12</i>
+          .question__content
+            p.text.text__question.
+              Оцените Ваше впечатление от информативной подачи блоков по работам над вашим проектом <i>*</i>
+            ul.section__impression--list
+              -var impression = ["Восхищен", "Удовлетворен", "Не полностью удовлетворен", "Не удовлетворен", "Все плохо"]
+              each impressions in impression
+                li.section__impression--item
+                  input.button__type--radio(type="radio" name="impression" value="impressions")
+                  span= impressions
+            .input__requirements
             input.input__text.input__text--impression(type="text" placeholder="Комментарий")
             .submit__form
               button.button.section__impression--button далее
               span.alt__submit или <i>enter</i>
 
-      .section.section__blogs
+      .section.section__plans.section__type--radio
         .question__content--wrapper
           .question__number
-            span.number__question--info Ответов <i>4</i> из <i>12</i>
+            span.number__question--info Ответов <i>6</i> из <i>12</i>
           .question__content
-            p.text__question.section__blogs--text.
-              Напишите, пожалуйста, какие интернет-издания, блоги или печатные СМИ Вы читаете чаще всего? <i>*</i>
+            p.text.text__question.
+              Интересна ли Вам разработка эффективного системного веб проекта? <i>*</i>
+            ul.section__impression--list
+              -var impression = ["Да, уже разрабатываю", "Да, планирую разрабатывать", "Расскажите мне подробнее", "Не вижу отличий системного веб проекта от других продуктов на рынке", "Нет, не интересно"]
+              each impressions in impression
+                li.section__impression--item
+                  input.button__type--radio(type="radio" name="impression" value="impressions")
+                  span= impressions
+
+      .section.section__plans.section__type--radio
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>7</i> из <i>12</i>
+          .question__content
+            p.text.text__question.
+              По каким критериям происходит отбор компании разработчика? <i>*</i>
+            ul.section__impression--list
+              -var impression = ["Критерий «Стоимость»", "Критерий «Экспертиза»", "Критерий «Время выполнения»", "Критерий «Опыт»", "Критерий «Совет знакомых»", "Критерий «Пиар компаний разработчика» ", "На данный момент отбор не актуальный"]
+              each impressions in impression
+                li.section__impression--item
+                  input.button__type--radio(type="radio" name="impression" value="impressions")
+                  span= impressions
+
+      .section.section__impression.section__type--radio_and_comment
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>8</i> из <i>12</i>
+          .question__content
+            p.text.text__question.heavy__text-block.
+              Оцените Ваше впечатление от организации подготовки коммерческого предложения (скорость отклика/ответа, конструктивные/понятные вопросы)? <i>*</i>
+            ul.section__impression--list
+              -var impression = ["Восхищен", "Удовлетворен", "Не полностью удовлетворен", "Не удовлетворен", "Все плохо"]
+              each impressions in impression
+                li.section__impression--item
+                  input.button__type--radio(type="radio" name="impression" value="impressions")
+                  span= impressions
+            .input__requirements
+            input.input__text.input__text--impression(type="text" placeholder="Комментарий")
+            .submit__form.submit__form--impression
+              button.button.section__impression--button далее
+              span.alt__submit или <i>enter</i>
+
+      .section.section__impression.section__type--radio_and_comment
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>9</i> из <i>12</i>
+          .question__content
+            p.text.text__question.heavy__text-block.
+              Оцените Ваше впечатление от работы наших сотрудников (приветливы ли были с вами, все ли ваши пожелания были учтены, конструктивные/понятные ли вопросы/ответы предоставлялись)? <i>*</i>
+            ul.section__impression--list
+              -var impression = ["Восхищен", "Удовлетворен", "Не полностью удовлетворен", "Не удовлетворен", "Все плохо"]
+              each impressions in impression
+                li.section__impression--item
+                  input.button__type--radio(type="radio" name="impression" value="impressions")
+                  span= impressions
+            .input__requirements
+            input.input__text.input__text--impression(type="text" placeholder="Комментарий")
+            .submit__form.submit__form--impression
+              button.button.section__impression--button далее
+              span.alt__submit или <i>enter</i>
+
+      .section.section__blogs.section__type--grade
+        .question__content--wrapper
+          .question__number
+            span.number__question--info Ответов <i>10</i> из <i>12</i>
+          .question__content
+            p.text.text__question.section__blogs--text.
+              Каковая вероятность того, что Вы порекомендуете Stearling Web Agency как экспертов в области разработки эффективных системных веб проектов своим знакомым, друзьям, коллегам? <i>*</i>
             ul.section__blogs--list
               -for(i=1;i<=10;i++)
                 li.section__blogs--item= i
-            .section__blogs--span
-              .section__blogs--span_left.
-                Не порекомендую ни в коем случае
-              .section__blogs--span_right.
-                Обязательно порекомендую
+            input.input__text.input__text--impression(type="text" placeholder="Назовите настоящую причину вашей оценки")
+            .input__requirements
+            .submit__form
+              button.button далее
+              span.alt__submit или <i>enter</i>
             
-      .section.section__recomend
+      .section.section__recomend.section__without_validation
         .question__content--wrapper
           .question__number
-            span.number__question--info Ответов <i>5</i> из <i>12</i>
+            span.number__question--info Ответов <i>11</i> из <i>12</i>
           .question__content
-            p.text__question.section__recomend--text.
-              Каковая вероятность того, что Вы порекомендуете Stearling Web Agency как экспертов в области разработки эффективных системных веб проектов своим знакомым, друзьям, коллегам? <i>*</i>
-            input.input
+            p.text.text__question.section__recomend--text.heavy__text-block.
+              Напишите, пожалуйста, какие интернет-издания, блоги или печатные СМИ Вы читаете чаще всего
+            input.input__text.input__text--impression(type="text" placeholder="Комментарий")
             .submit__form
-              button.button далее
+              button.button.button--without далее
               span.alt__submit или <i>enter</i>
 
-      .section
-        .question__content--wrapper
-          .question__number
-            span.number__question--info Ответов <i>6</i> из <i>12</i>
-          .question__content
-            p.text__question.
-              Как Вас зовут? <i>*</i>
-            input.input
-            .submit__form
-              button.button далее
-              span.alt__submit или <i>enter</i>
-      .section
-        .question__content--wrapper
-          .question__number
-            span.number__question--info Ответов <i>6</i> из <i>12</i>
-          .question__content
-            p.text__question.
-              Как Вас зовут? <i>*</i>
-            input.input
-            .submit__form
-              button.button далее
-              span.alt__submit или <i>enter</i>
-
-      .section
-        .question__content--wrapper
-          .question__number
-            span.number__question--info Ответов <i>6</i> из <i>12</i>
-          .question__content
-            p.text__question.
-              Как Вас зовут? <i>*</i>
-            input.input
-            .submit__form
-              button.button далее
-              span.alt__submit или <i>enter</i>
+      .section.section__greating
+        .title.section__greating--title.
+          Благодарим за искренние ответы
+        .container
+          .text.section__greating--text.heavy__text-block.
+            Мы отправили Ваш бонус (Чеклист создания эффективноо системного веб проэкта) на Ваш e-mail <i>alex.bikov@mail.ru</i>
+          .text.section__greating--text.heavy__text-block.
+            Виталий Беспалый и вся команда «Stearling Web Agency».
