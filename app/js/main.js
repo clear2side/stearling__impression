@@ -39,21 +39,9 @@ $(document).ready(function () {
     }, 600);
   });
 
-  /* section__greating */
-  $('.section__greating--button,.button--without').on('click', function () {
-    screen++;
-    position = (-screen * 300) + 'px';
-
-    pages.eq(screen).addClass('active').siblings().removeClass('active')
-    container.css('top', position);
-    setTimeout(function () {
-      inscroll = false;
-    });
-  });
-
   /* validation */
   function validateBlank(reqInput, string) {
-    if ((string == "") || (string == "checked")) {
+    if (string == "") {
       reqInput.show();
       reqInput.html('Пожалуйста заполните поля *');
     } else {
@@ -102,4 +90,15 @@ $(document).ready(function () {
     validateBlank(reqInput, string);
   });
 
+  /* sections without validation */
+  $('.section__greating--button,.button--without').on('click', function () {
+    screen++;
+    position = (-screen * 300) + 'px';
+
+    pages.eq(screen).addClass('active').siblings().removeClass('active')
+    container.css('top', position);
+    setTimeout(function () {
+      inscroll = false;
+    });
+  });
 });
